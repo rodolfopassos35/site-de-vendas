@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.topo {
+    background-color: #fb5731;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.links {
+    background-color: #f1e7e7;
+    display: flex;
+    justify-content: center;
+}
+
+.links a {
+    color: #221c1c;
+    padding: 14px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-weight:700
+}
+
+.links a:hover {
+    background-color: #ddd;
+    color: #2b1e1e;
+    border-radius: 10px;
+}
+
+#produtos {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#produtos h2 {
+    margin-bottom: 20px;
+}
+
+span {
+    color: rgb(17, 0, 255);
+}
+
+/* Animação */
+@keyframes slide-up {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contêiner de rolagem horizontal */
+.scroll-container {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.produtos-container {
+    display: inline-flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.produtos {
+    height: 200px;
+    width: 200px;
+    box-shadow: 5px 2px 5px gray;
+    margin:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    animation: slide-up 0.5s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Efeito de destaque ao passar o mouse */
+.produtos:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo do botão de compra */
+.comprar-btn {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.comprar-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.produtos:hover .comprar-btn {
+    opacity: 1;
+}
+
+/* Estilo do botão "CONFIRA NOSSA LOJA" */
+.btn-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.btn-link-loja {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #06ff0e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    animation: pulse 1s infinite;
+    text-shadow: 2px 2px #000;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.rodape {
+    background-color: #fb5731;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-style:italic;
+    font-weight: 900;
+
+}
